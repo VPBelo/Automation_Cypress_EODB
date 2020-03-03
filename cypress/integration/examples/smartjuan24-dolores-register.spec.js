@@ -1,8 +1,8 @@
 describe('smartjuan24-dolores', () => {
 
     it('Navigate to eodb-qa.ml', () => {
-        // cy.visit('https://eodb-qa.ml/app')
-        cy.visit('http://192.168.1.114:8080/app')
+        cy.visit('https://eodb-qa.ml/app')
+            // cy.visit('http://192.168.1.114:8080/app')
     })
     it('register', () => {
         cy.get(':nth-child(7) > .ant-btn').click()
