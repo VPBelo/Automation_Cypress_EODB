@@ -8,7 +8,7 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.visit('https://eodb-qa.ml/app')
     })
     it('Applicant Login', () => {
-        cy.get(':nth-child(6) > a > .ant-btn').click({ delay: 100 })
+        cy.get(':nth-child(7) > a > .ant-btn').click({ delay: 100 })
         cy.get('#login-email').type('vbelo@centralizedinc.com', { delay: 100 })
         cy.get('#login-password').type('admin', { delay: 100 })
         cy.get('#login-btn').click()
