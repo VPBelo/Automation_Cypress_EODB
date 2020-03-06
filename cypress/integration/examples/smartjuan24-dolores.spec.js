@@ -131,7 +131,7 @@ describe('EASE OF DOING BUSINESS', () => {
     //     //cy.get('button[class="ant-btn ant-btn-primary"]').click()
     //     cy.get('.ant-btn-primary').click().wait(5000)
     //     cy.pause()
-        
+
     // })
 
 
