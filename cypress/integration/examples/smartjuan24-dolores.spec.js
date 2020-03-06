@@ -109,30 +109,34 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get('.ant-col-sm-8 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').click()
         cy.get('li[style="user-select: none;"]').contains('Bulakin II').click();
         cy.get('.ant-btn-primary').click()
-        cy.get('.ant-card-body > :nth-child(2)').click()
+        cy.get('#v-step-05 > .ant-card-body > :nth-child(2)').click()
         cy.get('.ant-select-selection').click()
         cy.get('li[style="user-select: none;"]').contains('61202 - Mobile telecommunications services').click();
         cy.get('.ant-col-sm-3 > .ant-btn').click()
         cy.get('.ant-input').type('1000')
         cy.get('.ant-input-number-input').type('1000000')
-        cy.get('[data-row-key="0"] > :nth-child(3) > .ant-row > .ant-col-24 > [style="cursor: pointer; color: blue; font-weight: bold;"] > .ant-upload-select > .ant-upload > .anticon > svg').click()
         cy.pause()
 
     })
 
-    // it('Applicant Upload Required Documents', () => {
-    //     const fileName = 'policeclearance.json';
-    //     cy.fixture(fileName).then(fileContent => {
-    //     cy.get('input[type="file"]').upload({ fileContent, fileName, mimeType: 'application/json' })
-    //     cy.get('.ant-btn-group > :nth-child(1)').click()
-    //     cy.get(':nth-child(17) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').click()
-    //     cy.get('.ant-btn').click().wait(5000)
-    //     cy.get('button[class="ant-btn ant-btn-primary"]').click().wait(5000)
-    //     //cy.get('button[class="ant-btn ant-btn-primary"]').click()
-    //     cy.get('.ant-btn-primary').click().wait(5000)
-    //     cy.pause()
+    it('Applicant Upload Required Documents', () => {
+        const fileName = 'policeclearance.json';
+        cy.fixture(fileName).then(fileContent => {
+            cy.get('input[type="file"]').upload({ fileContent, fileName, mimeType: 'application/json' })
+            // cy.get('.ant-btn-group > :nth-child(1)').click()
+            // cy.get(':nth-child(17) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').click()
+            // cy.get('.ant-btn').click().wait(5000)
+            // cy.get('button[class="ant-btn ant-btn-primary"]').click().wait(5000)
+            // //cy.get('button[class="ant-btn ant-btn-primary"]').click()
+            // cy.get('.ant-btn-primary').click().wait(5000)
+            // cy.pause()
 
-    // })
+        })
+    })
+
+    it('Check', () => {
+
+    })
 
 
 })
