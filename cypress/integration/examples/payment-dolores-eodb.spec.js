@@ -4,7 +4,7 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.visit('https://eodb-qa.ml/app')
     })
 
-    it('Applicant Login', () => {
+    it('Applicant Payment', () => {
         cy.scrollTo('top')
         cy.get(':nth-child(6) > a > .ant-btn').click({
             delay: 100
