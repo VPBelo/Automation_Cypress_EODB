@@ -4,7 +4,7 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.visit('https://eodb-qa.ml/app')
     })
 
-    it('Applicant Update Profile', () => {
+    it('Application Tracker', () => {
         cy.scrollTo('top')
         cy.get(':nth-child(6) > a > .ant-btn').click({
             delay: 100
@@ -12,7 +12,9 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get('#login-email').type('vbelo@centralizedinc.com')
         cy.get('#login-password').type('admin')
         cy.get('#login-btn').click()
-        cy.scrollTo('top')
+        cy.get(':nth-child(1) > span > .ant-btn').click({delay: 100})
+        cy.pause()
+        
 
     })
 
