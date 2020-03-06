@@ -8,7 +8,7 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.visit('https://eodb-qa.ml/app')
     })
 
-    it('Applicant Apply for New Business Permit', () => {
+    it('Applicant Apply for Renewal Business Permit', () => {
         cy.scrollTo('top')
         cy.get('.ant-menu-item-selected').click({
             delay: 100

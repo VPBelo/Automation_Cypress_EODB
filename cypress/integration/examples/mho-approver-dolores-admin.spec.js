@@ -1,4 +1,4 @@
-describe('My first cypress test', () => {
+describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
 
     it('Navigate to eodb-qa.ml site', () => {
         cy.visit('https://eodb-qa.ml/admin')

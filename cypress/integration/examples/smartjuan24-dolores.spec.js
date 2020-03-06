@@ -120,23 +120,19 @@ describe('EASE OF DOING BUSINESS', () => {
 
     })
 
-    // it('Applicant Completing the Required Business Permit Fields  ', () => {
-
-    //     cy.get('input[placeholder="Select date"]').click()
-    //     cy.get('.ant-calendar-input').type('1982-05-13')
-    //     cy.get(':nth-child(4) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('09123456789')
-    //     cy.get('.ant-col-sm-8 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').click().type('DAGATAN').get('.ant-btn-primary').click()
-    //     cy.get('.ant-btn-primary').click({
-    //         delay: 100
-    //     })
-    //     cy.get('.ant-btn-primary').click({
-    //         delay: 100
-    //     })
-    //     cy.get('.ant-radio-group > :nth-child(1)').click().get('.ant-btn-primary').click({
-    //         delay: 100
-    //     })
-
-    // })
+    it('Applicant Upload Required Documents', () => {
+        const fileName = 'policeclearance.json';
+        cy.fixture(fileName).then(fileContent => {
+        cy.get('input[type="file"]').upload({ fileContent, fileName, mimeType: 'application/json' })
+        cy.get('.ant-btn-group > :nth-child(1)').click()
+        cy.get(':nth-child(17) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').click()
+        cy.get('.ant-btn').click().wait(5000)
+        cy.get('button[class="ant-btn ant-btn-primary"]').click().wait(5000)
+        //cy.get('button[class="ant-btn ant-btn-primary"]').click()
+        cy.get('.ant-btn-primary').click().wait(5000)
+        cy.pause()
+        
+    })
 
 
 })
