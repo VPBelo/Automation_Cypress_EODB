@@ -5,7 +5,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 describe('EASE OF DOING BUSINESS', () => {
 
     it('Navigate to eodb-qa.ml', () => {
-        cy.visit('https://eodb-dev.ml/app')
+        cy.visit('https://eodb-qa.ml/app')
     })
     it('Applicant Register', () => {
         cy.get(':nth-child(7) > a > .ant-btn').click()
