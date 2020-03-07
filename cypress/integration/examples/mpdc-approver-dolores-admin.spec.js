@@ -4,6 +4,12 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
         cy.visit('https://eodb-qa.ml/admin')
 
     })
+
+    it('MPDC Department Login', () => {
+        cy.pause()
+
+    })
+
     it('Login Admin MPDC Approver', () => {
         cy.get('input[placeholder="Email Address"]').type('mpdc@gmail.com');
         cy.get('input[placeholder="Enter Password"]').type('admin');

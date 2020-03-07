@@ -4,6 +4,12 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
         cy.visit('https://eodb-qa.ml/admin')
 
     })
+
+    it('BFP Department Login', () => {
+        cy.pause()
+
+    })
+
     it('Login Admin BFP Approver', () => {
         cy.get('input[placeholder="Email Address"]').type('bfp@gmail.com');
         cy.get('input[placeholder="Enter Password"]').type('admin');

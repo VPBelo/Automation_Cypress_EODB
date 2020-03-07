@@ -1,29 +1,8 @@
-import 'cypress-file-upload';
-Cypress.on('uncaught:exception', (err, runnable) => {
-    return false
-})
 describe('EASE OF DOING BUSINESS', () => {
 
     it('Navigate to eodb-qa.ml', () => {
         cy.visit('https://eodb-qa.ml/app')
     })
-
-    // it('Applicant Register', () => {
-    //     cy.get(':nth-child(7) > a > .ant-btn').click()
-    //     cy.get(':nth-child(7) > a > .ant-btn').click({
-    //         delay: 100
-    //     })
-    //     cy.get('#first-name').type('Vince')
-    //     cy.get('#last-name').type('Belo')
-    //     cy.get('#reg-email').type('vbelo@centralizedinc.com')
-    //     cy.get('#reg-password').type('admin')
-    //     cy.get('#reg-confirm-password').type('admin')
-    //     cy.scrollTo('top')
-    //     cy.get("#reg-btn").click()
-    //     cy.scrollTo('top')
-    //     cy.pause()
-
-    // })
 
     it('Applicant Login', () => {
         cy.scrollTo('top')
@@ -51,12 +30,15 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get('.ant-row-flex-space-between > :nth-child(1) > .ant-col-xs-24').click({
             delay: 100
         })
-        cy.get(':nth-child(2) > .ant-checkbox-wrapper > :nth-child(2)').click()
-        cy.get(':nth-child(3) > .ant-checkbox-wrapper > :nth-child(2)').click()
-        cy.get(':nth-child(4) > .ant-checkbox-wrapper > :nth-child(2)').click()
         cy.get(':nth-child(7) > .ant-checkbox-wrapper > :nth-child(2)').click()
         cy.get(':nth-child(8) > .ant-checkbox-wrapper > :nth-child(2)').click()
         cy.get(':nth-child(9) > .ant-checkbox-wrapper > :nth-child(2)').click()
+    //     cy.get(':nth-child(2) > .ant-checkbox-wrapper > :nth-child(2)').click()
+    //     cy.get(':nth-child(3) > .ant-checkbox-wrapper > :nth-child(2)').click()
+    //     cy.get(':nth-child(4) > .ant-checkbox-wrapper > :nth-child(2)').click()
+    //     cy.get(':nth-child(7) > .ant-checkbox-wrapper > :nth-child(2)').click()
+    //     cy.get(':nth-child(8) > .ant-checkbox-wrapper > :nth-child(2)').click()
+    //     cy.get(':nth-child(9) > .ant-checkbox-wrapper > :nth-child(2)').click()
         cy.get('.ant-btn-primary').click()
         cy.scrollTo('top')
         cy.get(':nth-child(2) > .ant-col-sm-6 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('Smith')
@@ -93,6 +75,8 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get('.ant-radio-group > :nth-child(4) > :nth-child(2)').click()
         cy.get(':nth-child(3) > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').click()
         cy.get('li[style="user-select: none;"]').contains('Services').click();
+        cy.get('.ant-col-xs-16 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').click()
+        cy.get('li[style="user-select: none;"]').contains('Service Office').click();
         cy.get(':nth-child(5) > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('Global Hub Solutions')
         cy.get(':nth-child(6) > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('Global Services Technology')
         cy.get(':nth-child(7) > :nth-child(1) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('02545774445')
@@ -115,26 +99,18 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get('.ant-col-sm-3 > .ant-btn').click()
         cy.get('.ant-input').type('1000')
         cy.get('.ant-input-number-input').type('1000000')
-        cy.pause()
+        // cy.pause()
 
     })
 
     it('Applicant Upload Required Documents', () => {
-        const fileName = 'policeclearance.json';
-        cy.fixture(fileName).then(fileContent => {
-            cy.get('input[type="file"]').upload({ fileContent, fileName, mimeType: 'application/json' })
-            // cy.get('.ant-btn-group > :nth-child(1)').click()
-            // cy.get(':nth-child(17) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').click()
-            // cy.get('.ant-btn').click().wait(5000)
-            // cy.get('button[class="ant-btn ant-btn-primary"]').click().wait(5000)
-            // //cy.get('button[class="ant-btn ant-btn-primary"]').click()
-            // cy.get('.ant-btn-primary').click().wait(5000)
-            // cy.pause()
-
-        })
-    })
-
-    it('Check', () => {
+        cy.pause()
+        cy.get('.ant-btn-group > .ant-btn-primary').click()
+        // cy.scrollTo('down')
+        cy.get('.ant-btn-primary').click()
+        cy.get('[align="end"] > .ant-btn-primary').click()
+        cy.get(':nth-child(9) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content > .ant-modal-body > .ant-row > [align="end"] > .ant-btn').click()
+        // cy.scrollTo('top')
 
     })
 

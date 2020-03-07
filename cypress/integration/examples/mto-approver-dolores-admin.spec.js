@@ -4,6 +4,12 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
         cy.visit('https://eodb-qa.ml/admin')
 
     })
+
+    it('MTO Department Login', () => {
+        cy.pause()
+
+    })
+
     it('Login Admin MTO Approver', () => {
         cy.get('input[placeholder="Email Address"]').type('mto@gmail.com');
         cy.get('input[placeholder="Enter Password"]').type('admin');

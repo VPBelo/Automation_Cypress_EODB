@@ -4,6 +4,12 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
         cy.visit('https://eodb-qa.ml/admin')
 
     })
+
+    it('Police Department Login', () => {
+        cy.pause()
+
+    })
+
     it('Login Admin PNP Approver', () => {
         cy.get('input[placeholder="Email Address"]').type('pnp@gmail.com');
         cy.get('input[placeholder="Enter Password"]').type('admin');
