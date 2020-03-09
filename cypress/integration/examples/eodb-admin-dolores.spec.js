@@ -6,7 +6,7 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('Tourism Department Login', () => {
-        cy.pause()
+        cy.get('#department-index1').click()
 
     })
 
@@ -20,7 +20,7 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('MEO Department Login', () => {
-        cy.pause()
+        cy.get('#department-index2').click()
 
     })
 
@@ -31,11 +31,11 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
         cy.scrollTo('top')
         cy.get('.ant-menu > :nth-child(5)').click()
         cy.get('.ant-btn-primary').click()
-    
+
     })
 
     it('MTO Department Login', () => {
-        cy.pause()
+        cy.get('#department-index3').click()
 
     })
 
@@ -50,7 +50,7 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('Barangay Department Login', () => {
-        cy.pause()
+        cy.get('#department-index4').click()
     })
 
     it('Login Admin Barangay Approver', () => {
@@ -64,7 +64,7 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('MHO Department Login', () => {
-        cy.pause()
+        cy.get('#department-index5').click()
 
     })
 
@@ -80,6 +80,7 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
 
     it('MPDC Department Login', () => {
         cy.pause()
+            // cy.get('#department-index5').click()
 
     })
 
@@ -94,7 +95,7 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('Investigator Department Login', () => {
-        cy.pause()
+        cy.get('#department-index6').click()
 
     })
 
@@ -109,7 +110,7 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('Police Department Login', () => {
-        cy.pause()
+        cy.get('#department-index7').click()
 
     })
 
@@ -124,7 +125,7 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('MENRO Department Login', () => {
-        cy.pause()
+        cy.get('#department-index9').click()
 
     })
 
@@ -139,7 +140,7 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('BPLO Department Login', () => {
-        cy.pause()
+        cy.get('#department-index10').click()
 
     })
 
@@ -154,7 +155,7 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('BFP Department Login', () => {
-        cy.pause()
+        cy.get('#department-index11').click()
 
     })
 
@@ -169,7 +170,7 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('MO Department Login', () => {
-        cy.pause()
+        cy.get('#department-index12').click()
 
     })
 
