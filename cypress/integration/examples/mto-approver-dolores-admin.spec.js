@@ -14,7 +14,8 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
         cy.get('input[placeholder="Email Address"]').type('mto@gmail.com');
         cy.get('input[placeholder="Enter Password"]').type('admin');
         cy.get(".ant-btn").click()
-        cy.get(':nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1) > .card_btn > .ant-card-body').click() // // For Processing
+        cy.get(':nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1) > .card_btn > .ant-card-body > .ant-row > .ant-col-18 > :nth-child(2)').click()
+        // cy.get(':nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1) > .card_btn > .ant-card-body > .ant-row > .ant-col-18 > :nth-child(2)').click() // // For Processing
         // cy.get(':nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(1) > .card_btn > .ant-card-body > .ant-row > .ant-col-18 > span').click() // In-Progress
         cy.get('.ant-btn-primary').click()
         cy.get('.ant-card-head-title > .ant-row > [align="right"] > .ant-btn').click()

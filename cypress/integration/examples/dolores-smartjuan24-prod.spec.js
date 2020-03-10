@@ -97,13 +97,12 @@ describe('EASE OF DOING BUSINESS', () => {
     it('Applicant Upload Required Documents', () => {
         cy.pause()
         cy.get('.ant-btn-group > .ant-btn-primary').click()
-        // cy.scrollTo('down')
         cy.get('.ant-btn-primary').click()
-        cy.get('[align="end"] > .ant-btn').click()
-        cy.get('[class="anticon anticon-close"] > .ant-btn-primary').click({ multiple: true })
-        // cy.get(':nth-child(8) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content > .ant-modal-body > .ant-row > [align="end"]').click()
+        cy.get('[align="end"] > .ant-btn-primary').click()
+        // cy.get('[class="anticon anticon-close"] > .ant-btn-primary').click({ multiple: true })
+        cy.get(':nth-child(8) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content > .ant-modal-body > .ant-row > [align="end"] > .ant-btn').click()
         // cy.get(':nth-child(9) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content > .ant-modal-body > .ant-row > [align="end"] > .ant-btn').click({ multiple: true })
-        cy.scrollTo('top')
+        // cy.scrollTo('top')
 
     })
 
