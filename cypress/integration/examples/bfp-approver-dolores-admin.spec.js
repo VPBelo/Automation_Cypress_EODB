@@ -6,7 +6,8 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('BFP Department Login', () => {
-        cy.pause()
+        cy.get('#department-index10').click()
+        // cy.pause()
 
     })
 

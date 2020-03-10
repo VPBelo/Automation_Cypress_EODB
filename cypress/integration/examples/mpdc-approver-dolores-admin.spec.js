@@ -6,8 +6,8 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('MPDC Department Login', () => {
-        // cy.get('#department-index5').click()
-        cy.pause()
+        cy.get('#department-index6').click()
+        // cy.pause()
 
     })
 

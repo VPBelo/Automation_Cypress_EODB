@@ -6,7 +6,7 @@ describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
     })
 
     it('MENRO Department Login', () => {
-        cy.get('#department-index9').click()
+        cy.get('#department-index7').click()
 
     })
 
