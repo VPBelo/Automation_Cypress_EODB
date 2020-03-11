@@ -8,7 +8,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 describe('EASE OF DOING BUSINESS', () => {
 
     it('Navigate to eodb-dev.ml', () => {
-        cy.visit('https://eodb-dev.ml/app')
+        cy.visit('https://dolores.smartjuan24.com/app')
     })
 
     it('Update Profile', () => {
@@ -16,8 +16,8 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get(':nth-child(6) > a > .ant-btn').click({
             delay: 100
         })
-        cy.get('#login-email').type('antoniobasasjr@gmail.com')
-        cy.get('#login-password').type('1234567890')
+        cy.get('#login-email').type('venus.belo.smsgt@gmail.com')
+        cy.get('#login-password').type('admin')
         cy.get('#login-btn').click()
         // cy.get('.ant-card-actions > :nth-child(1)').click()
         cy.get(':nth-child(1) > span > .ant-btn').click({ force: true })
@@ -26,7 +26,7 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get(':nth-child(4) > .ant-col-16 > .ant-form-item-control > .ant-form-item-children > .ant-input').type('Harold')
         
         //upload avatar
-        const fileName = 'UNLAD.png';
+        const fileName = 'VINCE.jpg';
         cy.fixture(fileName).then(fileContent => {
             cy.get('[type="file"]').upload({ fileContent, fileName, mimeType: 'image/png' });
           });
