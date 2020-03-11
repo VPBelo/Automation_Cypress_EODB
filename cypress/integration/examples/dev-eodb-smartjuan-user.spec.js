@@ -1,7 +1,12 @@
+import 'cypress-file-upload';
+Cypress.on('uncaught:exception', (err, runnable) => {
+    return false
+})
+
 describe('EASE OF DOING BUSINESS', () => {
 
-    it('Navigate to eodb-qa.ml', () => {
-        cy.visit('https://dolores.smartjuan24.com/app')
+    it('Navigate to eodb-dev.ml', () => {
+        cy.visit('https://eodb-dev.ml/app')
 
     })
 
@@ -12,9 +17,9 @@ describe('EASE OF DOING BUSINESS', () => {
     //     })
     //     cy.get('#first-name').type('Vince')
     //     cy.get('#last-name').type('Belo')
-    //     cy.get('#reg-email').type('ccci@centralizedinc.com')
-    //     cy.get('#reg-password').type('ccciinc603')
-    //     cy.get('#reg-confirm-password').type('ccciinc603')
+    //     cy.get('#reg-email').type('venus.belo.smsgt@gmail.com')
+    //     cy.get('#reg-password').type('admin')
+    //     cy.get('#reg-confirm-password').type('admin')
     //     cy.scrollTo('top')
     //     cy.get("#reg-btn").click()
     //     cy.scrollTo('top')
@@ -27,8 +32,8 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get(':nth-child(6) > a > .ant-btn').click({
             delay: 100
         })
-        cy.get('#login-email').type('ccci@centralizedinc.com')
-        cy.get('#login-password').type('ccciinc603')
+        cy.get('#login-email').type('venus.belo.smsgt@gmail.com')
+        cy.get('#login-password').type('admin')
         cy.get('#login-btn').click()
         cy.scrollTo('top')
 
@@ -40,12 +45,17 @@ describe('EASE OF DOING BUSINESS', () => {
             delay: 100
         })
         cy.scrollTo('top')
-        cy.get('#v-step-2 > :nth-child(3)').click()
-        cy.get('.v-step__button-skip').click({
-            delay: 100
-        })
-        cy.scrollTo('top')
-        cy.get('.ant-row-flex-space-between > .ant-row-flex > :nth-child(1)').click()
+        cy.get('#v-step-01').click()
+        cy.get('#v-step-04 > .ant-card-body > .ant-row > .ant-col-24 > ul > :nth-child(2)').click()
+        // cy.get('#v-step-04 > .ant-card-head > .ant-card-head-wrapper > .ant-card-head-title').click()
+        // cy.get('.v-step__button-skip').click({
+        //     delay: 100
+        // })
+        // cy.get('#v-step-04 > .ant-card-body').click()
+        // cy.scrollTo('top')
+        // cy.get('.ant-row-flex-space-between > .ant-row-flex > :nth-child(1)').click()
+        // cy.get('#v-step-04 > .ant-card-body > .ant-row > .ant-col-24 > ul > :nth-child(1)')
+        // cy.pause()
         cy.get(':nth-child(4) > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').click()
         cy.get('.ant-btn-primary').click()
         cy.scrollTo('top')
@@ -73,7 +83,7 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get(':nth-child(8) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').type('Manila')
         cy.get('li[style="user-select: none;"]').contains('Voluntary').click()
         cy.get(':nth-child(3) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type('100000')
-        cy.get(':nth-child(4) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type('100000')
+        // cy.get(':nth-child(4) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type('100000')
         cy.get(':nth-child(5) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type('500000')
         cy.get('.ant-col-sm-16 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('121')
         cy.get('[style="margin-left: -2.5px; margin-right: -2.5px;"] > .ant-col-sm-8 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('222')
@@ -115,16 +125,34 @@ describe('EASE OF DOING BUSINESS', () => {
     })
 
     it('Applicant Upload Required Documents', () => {
-        cy.pause()
+        // cy.pause()
         cy.get('.ant-btn-group > .ant-btn-primary').click()
         cy.get('.ant-btn-primary').click()
         cy.get('[align="end"] > .ant-btn-primary').click()
         // cy.get('[class="anticon anticon-close"] > .ant-btn-primary').click({ multiple: true })
-        cy.get(':nth-child(8) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content > .ant-modal-body > .ant-row > [align="end"] > .ant-btn').click()
+        cy.get(':nth-child(8) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content > .ant-modal-body > .ant-row > [align="end"] > .ant-btn').click().wait(5000)
         // cy.get(':nth-child(9) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content > .ant-modal-body > .ant-row > [align="end"] > .ant-btn').click({ multiple: true })
         // cy.scrollTo('top')
 
     })
+
+    // it('Applicant Upload Required Documents', () => {
+    //     const fileName = 'policeclearance.json';
+    //     cy.fixture(fileName).then(fileContent => {
+    //         cy.get('input[type="file"]').upload({ fileContent, fileName, mimeType: 'application/json' })
+    //         cy.get('.ant-table-content > .ant-table-body > table > .ant-table-tbody > [data-row-key="0"] > :nth-child(3)').click()
+    //         cy.get('[data-row-key="0"] > :nth-child(3) > .ant-row > .ant-col-24').click()
+    //         // cy.get('.ant-btn-group > :nth-child(1)').click()
+    //         // cy.get(':nth-child(17) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').click()
+    //         cy.get('.ant-btn').click().wait(5000)
+    //         cy.get('button[class="ant-btn ant-btn-primary"]').click().wait(5000)
+    //         //cy.get('button[class="ant-btn ant-btn-primary"]').click()
+    //         cy.get('.ant-btn-primary').click().wait(5000)
+    //         cy.pause()
+
+    //     })
+
+    // })
 
 
 })
