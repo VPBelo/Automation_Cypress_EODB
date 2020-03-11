@@ -1,6 +1,6 @@
 describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
 
-    it('Navigate to eodb-qa.ml site', () => {
+    it('Navigate to Dolores SmartJuan24 Admin Portal', () => {
         cy.visit('https://dolores.smartjuan24.com/admin')
 
     })

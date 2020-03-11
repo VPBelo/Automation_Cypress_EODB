@@ -1,7 +1,7 @@
 describe('EASE OF DOING BUSINESS', () => {
 
-    it('Navigate to eodb-qa.ml', () => {
-        cy.visit('https://eodb-qa.ml/app')
+    it('Navigate to Dolores SmartJuan24 EODB', () => {
+        cy.visit('https://dolores.smartjuan24.com/app')
     })
 
     it('Update Profile', () => {
@@ -9,7 +9,7 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get(':nth-child(6) > a > .ant-btn').click({
             delay: 100
         })
-        cy.get('#login-email').type('vbelo@centralizedinc.com')
+        cy.get('#login-email').type('venus.belo.smsgt@gmail.com')
         cy.get('#login-password').type('admin')
         cy.get('#login-btn').click()
         cy.get('.ant-card-actions > :nth-child(1)').click()

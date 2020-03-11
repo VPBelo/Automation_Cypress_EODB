@@ -1,6 +1,6 @@
 describe('EASE OF DOING BUSINESS', () => {
 
-    it('Navigate to eodb-qa.ml', () => {
+    it('Navigate to Dolores Smartjuan24 EODB', () => {
         cy.visit('https://dolores.smartjuan24.com/app')
 
     })

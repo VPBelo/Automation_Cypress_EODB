@@ -1,16 +1,16 @@
 describe('EASE OF DOING BUSINESS ADMIN PORTAL', () => {
 
-    it('Navigate to eodb-qa.ml site', () => {
+    it('Navigate to Dolores SmartJuan24 Admin Portal', () => {
         cy.visit('https://dolores.smartjuan24.com/admin')
 
     })
 
-    it('MTO Department Login', () => {
+    it('ADMINISTRATOR Department Login', () => {
         cy.get('department-index12').click()
 
     })
 
-    it('Login Admin MTO Approver', () => {
+    it('Login AdminApprover', () => {
         cy.get('input[placeholder="Email Address"]').type('admin@centralizedinc.com');
         cy.get('input[placeholder="Enter Password"]').type('Ariel123');
         cy.get(".ant-btn").click()
