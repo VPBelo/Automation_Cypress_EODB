@@ -1,6 +1,6 @@
 describe('EASE OF DOING BUSINESS', () => {
 
-    it('Navigate to eodb-qa.ml', () => {
+    it('Navigate to Dolores Smartjuan24 EODB', () => {
         cy.visit('https://dolores.smartjuan24.com/app')
     })
 
@@ -23,7 +23,7 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get(':nth-child(1) > .ant-form-item-control-wrapper > .ant-form-item-control').type('4111111111111111', { delay: 100 })
         cy.get(':nth-child(2) > .ant-form-item-control-wrapper > .ant-form-item-control').type('Vince Belo', { delay: 100 })
         cy.get(':nth-child(3) > .ant-form-item-control-wrapper > .ant-form-item-control').type('12/22', { delay: 100 })
-        cy.get(':nth-child(4) > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('233', { delay: 100 })
+        cy.get(':nth-child(4) > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('232', { delay: 100 })
         cy.get('form > :nth-child(1) > :nth-child(1)').click().wait(5000)
         cy.get('.ant-card-body > .ant-btn').click().wait(5000)
         // cy.get('.ant-drawer-close').click(1000)

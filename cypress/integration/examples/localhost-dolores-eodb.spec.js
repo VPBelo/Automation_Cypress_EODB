@@ -4,17 +4,30 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 })
 describe('EASE OF DOING BUSINESS', () => {
 
-    it('Navigate to eodb-qa.ml', () => {
-        cy.visit('http://localhost:8080/app')
+    it('Navigate to eodb-dev.ml', () => {
+        // cy.visit('http://localhost:8080/app')
+        cy.visit('https://eodb-dev.ml/app')
     })
+
+    // it('Applicant Login', () => {
+    //     cy.scrollTo('top')
+    //     cy.get(':nth-child(6) > a > .ant-btn').click({
+    //         delay: 100
+    //     })
+    //     cy.get('#login-email').type('itsmeeh.chzkha@gmail.com')
+    //     cy.get('#login-password').type('Chz123')
+    //     cy.get('#login-btn').click()
+    //     cy.scrollTo('top')
+
+    // })
 
     it('Applicant Login', () => {
         cy.scrollTo('top')
         cy.get(':nth-child(6) > a > .ant-btn').click({
             delay: 100
         })
-        cy.get('#login-email').type('itsmeeh.chzkha@gmail.com')
-        cy.get('#login-password').type('Chz123')
+        cy.get('#login-email').type('venus.belo.smsgt@gmail.com')
+        cy.get('#login-password').type('admin')
         cy.get('#login-btn').click()
         cy.scrollTo('top')
 
@@ -112,19 +125,21 @@ describe('EASE OF DOING BUSINESS', () => {
 
     })
 
-    // it('Applicant Upload Required Documents', () => {
-    //     const fileName = 'policeclearance.json';
-    //     cy.fixture(fileName).then(fileContent => {
-    //     cy.get('input[type="file"]').upload({ fileContent, fileName, mimeType: 'application/json' })
-    //     cy.get('.ant-btn-group > :nth-child(1)').click()
-    //     cy.get(':nth-child(17) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').click()
-    //     cy.get('.ant-btn').click().wait(5000)
-    //     cy.get('button[class="ant-btn ant-btn-primary"]').click().wait(5000)
-    //     //cy.get('button[class="ant-btn ant-btn-primary"]').click()
-    //     cy.get('.ant-btn-primary').click().wait(5000)
-    //     cy.pause()
+    it('Applicant Upload Required Documents', () => {
+        const fileName = 'policeclearance.json';
+        cy.fixture(fileName).then(fileContent => {
+            cy.get('input[type="file"]').upload({ fileContent, fileName, mimeType: 'application/json' })
+            cy.get('.ant-btn-group > :nth-child(1)').click()
+            cy.get(':nth-child(17) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').click()
+            cy.get('.ant-btn').click().wait(5000)
+            cy.get('button[class="ant-btn ant-btn-primary"]').click().wait(5000)
+            //cy.get('button[class="ant-btn ant-btn-primary"]').click()
+            cy.get('.ant-btn-primary').click().wait(5000)
+            cy.pause()
 
-    // })
+        })
+
+    })
 
 
 })

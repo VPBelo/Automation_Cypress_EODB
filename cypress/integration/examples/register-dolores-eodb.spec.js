@@ -1,6 +1,6 @@
 describe('EASE OF DOING BUSINESS', () => {
 
-    it('Navigate to eodb-qa.ml', () => {
+    it('Navigate to Dolores Smartjuan24 EODB', () => {
         cy.visit('https://eodb-qa.ml/app')
     })
 
@@ -11,9 +11,9 @@ describe('EASE OF DOING BUSINESS', () => {
         })
         cy.get('#first-name').type('Vince')
         cy.get('#last-name').type('Belo')
-        cy.get('#reg-email').type('vbelo@centralizedinc.com')
-        cy.get('#reg-password').type('admin')
-        cy.get('#reg-confirm-password').type('admin')
+        cy.get('#reg-email').type('ccci@centralizedinc.com')
+        cy.get('#reg-password').type('ccciinc603')
+        cy.get('#reg-confirm-password').type('ccciinc603')
         cy.scrollTo('top')
         cy.get("#reg-btn").click()
         cy.scrollTo('top')

@@ -1,16 +1,34 @@
 describe('EASE OF DOING BUSINESS', () => {
 
-    it('Navigate to eodb-qa.ml', () => {
+    it('Navigate to Dolores Smartjuan24 EODB', () => {
         cy.visit('https://dolores.smartjuan24.com/app')
+
     })
+
+    // it('Applicant Register', () => {
+    //     cy.get(':nth-child(7) > a > .ant-btn').click()
+    //     cy.get(':nth-child(7) > a > .ant-btn').click({
+    //         delay: 100
+    //     })
+    //     cy.get('#first-name').type('Vince')
+    //     cy.get('#last-name').type('Belo')
+    //     cy.get('#reg-email').type('ccci@centralizedinc.com')
+    //     cy.get('#reg-password').type('ccciinc603')
+    //     cy.get('#reg-confirm-password').type('ccciinc603')
+    //     cy.scrollTo('top')
+    //     cy.get("#reg-btn").click()
+    //     cy.scrollTo('top')
+    //     cy.pause()
+
+    // })
 
     it('Applicant Login', () => {
         cy.scrollTo('top')
         cy.get(':nth-child(6) > a > .ant-btn').click({
             delay: 100
         })
-        cy.get('#login-email').type('venus.belo.smsgt@gmail.com')
-        cy.get('#login-password').type('admin')
+        cy.get('#login-email').type('ccci@centralizedinc.com')
+        cy.get('#login-password').type('ccciinc603')
         cy.get('#login-btn').click()
         cy.scrollTo('top')
 
@@ -54,7 +72,9 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get(':nth-child(8) > .ant-col-sm-11 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('Filipino')
         cy.get(':nth-child(8) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').type('Manila')
         cy.get('li[style="user-select: none;"]').contains('Voluntary').click()
-        cy.get(':nth-child(5) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type('1000000')
+        cy.get(':nth-child(3) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type('100000')
+        cy.get(':nth-child(4) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type('100000')
+        cy.get(':nth-child(5) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type('500000')
         cy.get('.ant-col-sm-16 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('121')
         cy.get('[style="margin-left: -2.5px; margin-right: -2.5px;"] > .ant-col-sm-8 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('222')
         cy.get('[style="margin-left: -2.5px; margin-right: -2.5px;"] > :nth-child(3) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('ANNEX')
@@ -82,14 +102,14 @@ describe('EASE OF DOING BUSINESS', () => {
         cy.get(':nth-child(4) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('Valley')
         cy.get(':nth-child(5) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('Sapphire')
         cy.get('.ant-col-sm-8 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').click()
-        cy.get('li[style="user-select: none;"]').contains('Bulakin II').click();
+        cy.get('li[style="user-select: none;"]').contains('Dagatan').click();
         cy.get('.ant-btn-primary').click()
         cy.get('#v-step-05 > .ant-card-body > :nth-child(2)').click()
         cy.get('.ant-select-selection').click()
         cy.get('li[style="user-select: none;"]').contains('61202 - Mobile telecommunications services').click();
         cy.get('.ant-col-sm-3 > .ant-btn').click()
-        cy.get('.ant-input').type('1000')
-        cy.get('.ant-input-number-input').type('1000000')
+        cy.get('.ant-input').type('100')
+        cy.get('.ant-input-number-input').type('500000')
         cy.pause()
 
     })
