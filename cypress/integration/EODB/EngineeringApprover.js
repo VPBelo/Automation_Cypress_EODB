@@ -11,7 +11,7 @@ describe('Office of the Municipal Engineer', () => {
 
 
 
-    it('Login Admin MEO Department Approver', function () {
+    it('Approver must be able to Login in Admin Portal MEO Department', function () {
         cy.get('#department-index1').click()
         cy.scrollTo('top')
         cy.get('input[placeholder="Email Address"]').type(this.meo_account.username)

@@ -10,7 +10,7 @@ describe('Office of the Municipal Treasurer', () => {
       })
 
 
-    it('Login Admin MTO Department Approver', function () {
+    it('Approver must be able to Login in Admin Portal MTO Department', function () {
         cy.get('#department-index2').click()
         cy.scrollTo('top')
         cy.get('input[placeholder="Email Address"]').type(this.mto_account.username)
@@ -23,7 +23,6 @@ describe('Office of the Municipal Treasurer', () => {
         cy.get('.ant-btn-primary').click().wait(5000)
         cy.get('.ant-card-head-title > .ant-row > [align="right"] > .ant-btn').click()
         cy.get('.ant-col-1 > .ant-btn').click()
-        cy.pause()
         cy.get(':nth-child(3) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type('100000')
         cy.get('.ant-form-item-children > .ant-input').type('Complete')
         cy.get('.ant-btn-group > .ant-btn-primary').click().wait(5000)
