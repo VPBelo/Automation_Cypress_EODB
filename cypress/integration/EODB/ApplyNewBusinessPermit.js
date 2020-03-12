@@ -48,7 +48,7 @@ describe('SmartJuan24 User Portal', () => {
         cy.get(':nth-child(7) > .ant-col-sm-12 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').click()
         cy.get('li[style="user-select: none;"]').contains(this.application_details.educational_attainment).click();
         cy.get(':nth-child(8) > .ant-col-sm-11 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type(this.application_details.citizenship)
-        // cy.get(':nth-child(8) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').type(this.application_details.birthplace)
+        cy.get(':nth-child(8) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').click()
         cy.get('li[style="user-select: none;"]').contains(this.application_details.basic_community).click()
         cy.get(':nth-child(3) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type(this.application_details.real_property)
         // cy.get(':nth-child(4) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type('100000')
@@ -88,7 +88,6 @@ describe('SmartJuan24 User Portal', () => {
         cy.get('.ant-col-sm-3 > .ant-btn').click()
         cy.get('.ant-input').type(this.application_details.units)
         cy.get('.ant-input-number-input').type(this.application_details.capital_investment)
-        cy.pause()
 
     })
 
@@ -106,6 +105,20 @@ describe('SmartJuan24 User Portal', () => {
         })
 
 
+    })
+
+    it('Applicant must be able to Submit Application for Business Permit', () => {
+        cy.get('.ant-btn-group > .ant-btn-primary').wait(5000).click()
+        cy.get('.ant-btn-primary').click()
+        cy.get('[align="end"] > .ant-btn-primary').click().wait(5000)
+        cy.get(':nth-child(8) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content > .ant-modal-body > .ant-row > [align="end"] > .ant-btn').click().wait(5000)
+        cy.scrollTo('top')
+        cy.get(':nth-child(5) > span > #v-step-5').click({ force: true })
+        cy.get('.ant-modal-confirm-btns > .ant-btn-primary').click().wait(5000)
+        cy.get('#cypress_ref_no').invoke('text').then((reference) =>{
+            // console.log('reference ####', reference)
+            Cypress.env("reference",reference)
+        })
     })
 
 
