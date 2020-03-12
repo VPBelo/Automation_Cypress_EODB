@@ -17,7 +17,7 @@ describe('Office of the Municipal Treasurer', () => {
         cy.get('input[placeholder="Enter Password"]').type(this.mto_account.password)
         cy.get(".ant-btn").click().wait(5000)
         cy.scrollTo('top')
-        cy.get('.ant-input').type('1584004772722200')
+        cy.get('.ant-input').type(Cypress.env("reference"))
         // cy.get('.ant-input').type(Cypress.env("reference"))
         cy.get(':nth-child(1) > .card_btn > .ant-card-body > .ant-row > .ant-col-18 > :nth-child(2)').click()
         cy.get('.ant-btn-primary').click().wait(5000)

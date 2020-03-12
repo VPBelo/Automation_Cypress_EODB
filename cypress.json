@@ -2,7 +2,11 @@
   "projectId": "cotvd4",
   "baseUrl": "https://eodb-dev.ml/app",
   "testFiles": [
+    "EODB/OpenSmartJuan24.js",
+    "EODB/Login.js",
+    "EODB/ApplyNewBusinessPermit.js",
     "EODB/OpenAdminSmartJuan24.js",
-    "EODB/MpdcApprover.js"
+    "EODB/TreasurerApprover.js",
+    "EODB/EngineeringApprover.js"
   ]
 }
