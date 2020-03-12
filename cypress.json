@@ -1,4 +1,10 @@
 {
   "projectId": "cotvd4",
-  "baseUrl":"https://eodb-dev.ml/app"
+  "baseUrl":"https://eodb-dev.ml/app",
+  "testFiles": [
+    "final/OpenSmartJuan24.js",
+    "final/Registration.js",
+    "final/Login.js",
+    "final/UpdateProfile.js"
+  ]
 }
