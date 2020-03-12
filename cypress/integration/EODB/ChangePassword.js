@@ -1,11 +1,4 @@
-import 'cypress-file-upload';
-
-
-Cypress.on('uncaught:exception', (err, runnable) => {
-    return false
-})
-
-describe('User Profile Update', () => {
+describe('User Change Password', () => {
 
     /**
      * @description initialize fixtures
