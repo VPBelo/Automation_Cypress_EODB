@@ -24,7 +24,6 @@ describe('Office of the Barangay Chairman', () => {
         // cy.get(':nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(1) > .card_btn > .ant-card-body > .ant-row > .ant-col-18 > :nth-child(2)').click()
         cy.get('.ant-btn-primary').click().wait(5000)
         cy.get('.ant-card-head-title > .ant-row > [align="right"] > .ant-btn').click()
-        cy.get('.ant-col-1 > .ant-btn').click()
         cy.get('.ant-modal-close-icon > svg > path').click({ force: true })
         // cy.get('.ant-input-number-input').type('350')
         // cy.get('.ant-form-item-children > .ant-input').type('Complete')
