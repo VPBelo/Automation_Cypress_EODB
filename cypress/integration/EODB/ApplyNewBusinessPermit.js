@@ -111,17 +111,16 @@ describe('SmartJuan24 User Portal', () => {
         cy.get('.ant-btn-group > .ant-btn-primary').wait(5000).click()
         cy.get('.ant-btn-primary').click()
         cy.get('[align="end"] > .ant-btn-primary').click().wait(5000)
-        
-        cy.get('#cypress_ref_no').invoke('text').then((reference) =>{
+        cy.get('#cypress_ref_no').invoke('text').then((reference) => {
             // console.log('reference ####', reference)
-            Cypress.env("reference",reference)
+            Cypress.env("reference", reference)
             cy.get(':nth-child(8) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content > .ant-modal-body > .ant-row > [align="end"] > .ant-btn').click().wait(5000)
             cy.scrollTo('top')
             cy.get(':nth-child(5) > span > #v-step-5').click({ force: true })
             cy.get('.ant-modal-confirm-btns > .ant-btn-primary').click().wait(5000)
         })
-        
-        
+
+
     })
 
 
