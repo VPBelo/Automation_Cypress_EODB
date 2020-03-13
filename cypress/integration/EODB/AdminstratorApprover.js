@@ -9,23 +9,7 @@ describe('System Administrators', () => {
         cy.fixture('administrator_account.json').as('administrator_account')
     })
 
-
-
-    /**
-     * @description open url
-     * 
-     */
-    it('Open SmartJuan24', function () {
-        cy.visit(this.settings.base_url1)
-    })
-
-    /**
-     * @description Login to User Account
-     * 
-     */
-
-
-    it('Login Admin Administrator Approver', function () {
+    it('Admin must be able to Login in Admin Portal Administrator Department', function () {
         cy.get('#department-index12').click()
         cy.scrollTo('top')
         cy.get('input[placeholder="Email Address"]').type(this.administrator_account.username)

@@ -1,33 +1,25 @@
-describe('User Profile Testing', () => {
+describe('User Reservation in Tourism Portal', () => {
 
 
     /**
-     * @description open url
+     * @description initialize fixtures
      * 
      */
-    it('Open SmartJuan24', function () {
-        cy.visit(this.settings.base_url)
+    beforeEach(() => {
+        cy.fixture('settings.json').as('settings')
+        cy.fixture('user_account.json').as('user_account')
     })
+
 
     /**
-     * @description Login to User Account
+     * @description Payment
      * 
      */
-    it('Login', function () {
+    it('Applicant should be able to Booking in Tourism Page', function () {
+        cy.get('#my-application').click({ force: true })
         cy.scrollTo('top')
-        cy.get(':nth-child(6) > a > .ant-btn').click({ delay: 100 })
-        cy.get('#login-email').type(this.user_account.username)
-        cy.get('#login-password').type(this.user_account.password)
-        cy.get('#login-btn').click()
-    })
-
-    it('Application Tracker', () => {
-        cy.scrollTo('top')
-        cy.get('.ant-card-actions > :nth-child(2)').click({
-            delay: 100
-        })
-
-
+        // cy.get(':nth-child(5) > span > #v-step-5').click({ force: true })
+        // cy.get('.ant-modal-confirm-btns > .ant-btn-primary').click().wait(5000)
     })
 
 

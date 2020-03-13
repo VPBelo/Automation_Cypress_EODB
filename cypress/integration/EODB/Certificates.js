@@ -1,33 +1,36 @@
-describe('User Certificates', () => {
+describe('User Certificates and Permits', () => {
 
 
     /**
-     * @description open url
+     * @description initialize fixtures
      * 
      */
-    it('Open SmartJuan24', function () {
-        cy.visit(this.settings.base_url)
+    beforeEach(() => {
+        cy.fixture('settings.json').as('settings')
+        cy.fixture('user_account.json').as('user_account')
     })
+
 
     /**
-     * @description Login to User Account
+     * @description Payment
      * 
      */
-    it('Login', function () {
+    it('Applicant should be able to View and Save their Certificates and Permits', function () {
         cy.scrollTo('top')
-        cy.get(':nth-child(6) > a > .ant-btn').click({ delay: 100 })
-        cy.get('#login-email').type(this.user_account.username)
-        cy.get('#login-password').type(this.user_account.password)
-        cy.get('#login-btn').click()
-    })
-
-    it('Application Tracker', () => {
-        cy.scrollTo('top')
-        cy.get('.ant-card-actions > :nth-child(2)').click({
-            delay: 100
-        })
-
-
+        cy.get('#my-certificates').click({ force: true })
+        cy.get(':nth-child(2) > .card_btn > .ant-card-body').click()
+        cy.pause()
+        cy.get(':nth-child(3) > .card_btn > .ant-card-body').click()
+        cy.pause()
+        cy.get(':nth-child(4) > .card_btn > .ant-card-body').click()
+        cy.pause()
+        cy.get(':nth-child(5) > .card_btn > .ant-card-body').click()
+        cy.pause()
+        cy.get(':nth-child(6) > .card_btn > .ant-card-body').click()
+        cy.pause()
+        cy.get(':nth-child(7) > .card_btn > .ant-card-body').click()
+        cy.get(':nth-child(5) > span > #v-step-5').click({ force: true }).wait(5000)
+        cy.get('.ant-modal-confirm-btns > .ant-btn-primary').click().wait(5000)
     })
 
 
