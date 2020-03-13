@@ -1,13 +1,4 @@
 {
-<<<<<<< HEAD
-    "projectId": "cotvd4",
-    "baseUrl": "https://eodb-dev.ml/app",
-    "testFiles": [
-        "EODB/OpenSmartJuan24.js",
-        "EODB/Login.js",
-        "EODB/Payment.js"
-    ]
-=======
   "projectId": "cotvd4",
   "baseUrl": "https://eodb-dev.ml/app",
   "testFiles": [
@@ -18,5 +9,4 @@
     "EODB/TreasurerApprover.js",
     "EODB/EngineeringApprover.js"
   ]
->>>>>>> 17e7eec8a49033457aba9828962add9ba9cb4957
 }
