@@ -10,7 +10,7 @@ describe('Office of the Municipal Planning and Development', () => {
     })
 
 
-    it('Approver must be able to Login in Admin Portal MPDC Department', function () {
+    it('Approver must be able to Login in Admin Portal MPDC Department', function() {
         cy.get('#department-index6').click()
         cy.scrollTo('top')
         cy.get('input[placeholder="Email Address"]').type(this.mpdc_account.username)
