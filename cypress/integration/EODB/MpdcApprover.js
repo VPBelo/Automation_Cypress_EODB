@@ -18,7 +18,7 @@ describe('Office of the Municipal Planning and Development', () => {
         cy.get(".ant-btn").click().wait(5000)
         cy.scrollTo('top')
         // cy.get('input[placeholder="Search Keyword (eg. Reference Number, Business Name)"]').type(Cypress.env("reference"))
-        cy.get('input[placeholder="Search Keyword (eg. Reference Number, Business Name)"]').type('1584077237396272')
+        cy.get('input[placeholder="Search Keyword (eg. Reference Number, Business Name)"]').type('')
         cy.get('.ant-col-18 > :nth-child(2)').click()
         // cy.get('.ant-input').type('1584004772722200')
         // cy.get('.ant-col-18 > :nth-child(2)').click()
@@ -31,10 +31,10 @@ describe('Office of the Municipal Planning and Development', () => {
         cy.scrollTo('top')
         cy.get(':nth-child(2) > .ant-list-item-meta > .ant-list-item-meta-avatar > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').click()
         cy.get('.ant-card-body > .ant-input').type('Approved')
-        // cy.get('.ant-row-flex > [align="right"] > .ant-btn').click()
-        // cy.get('.ant-popover-buttons > .ant-btn-primary').click()
-        // cy.get('.ant-menu > :nth-child(5)').click().wait(5000)
-        // cy.get('.ant-btn-primary').click().wait(5000)
+        cy.get('.ant-row-flex > [align="right"] > .ant-btn').click()
+        cy.get('.ant-popover-buttons > .ant-btn-primary').click()
+        cy.get('.ant-menu > :nth-child(5)').click().wait(5000)
+        cy.get('.ant-btn-primary').click().wait(5000)
     })
 
 
