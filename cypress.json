@@ -2,7 +2,8 @@
     "projectId": "cotvd4",
     "baseUrl": "https://eodb-dev.ml/app",
     "testFiles": [
-        "EODB/OpenAdminSmartJuan24.js",
-        "EODB/TreasurerCashier.js"
+        "EODB/OpenSmartJuan24.js",
+        "EODB/Login.js",
+        "EODB/ApplyRenewalEncoderBP.js"
     ]
 }
