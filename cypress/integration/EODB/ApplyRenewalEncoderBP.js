@@ -1,4 +1,4 @@
-describe('Login User Account', () => {
+describe('SmartJuan24 User Portal', () => {
 
     /**
      * @description initialize fixtures
@@ -7,25 +7,11 @@ describe('Login User Account', () => {
     beforeEach(() => {
         cy.fixture('settings.json').as('settings')
         cy.fixture('user_account.json').as('user_account')
+        cy.fixture('application_details.json').as('application_details')
     })
 
-    it('Open SmartJuan24', function() {
-        cy.visit(this.settings.base_url)
-    })
 
-    it('Applicant Login', function() {
-        cy.scrollTo('top')
-        cy.get(':nth-child(6) > a > .ant-btn').click({
-            delay: 100
-        })
-        cy.get('#login-email').type(this.user_account.username)
-        cy.get('#login-password').type(this.user_account.password)
-        cy.get('#login-btn').click()
-        cy.scrollTo('top')
-
-    })
-
-    it('Applicant Apply for Renewal Business Permit', () => {
+    it('Applicant must be able to Apply for Renewal Business Permit for Walkin', () => {
         cy.scrollTo('top')
         cy.get('#v-step-2 > :nth-child(3)').click(5000)
         cy.get('.v-step__button-skip').click({
