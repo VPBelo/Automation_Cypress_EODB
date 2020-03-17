@@ -4,6 +4,6 @@
     "testFiles": [
         "EODB/OpenSmartJuan24.js",
         "EODB/Login.js",
-        "EODB/ApplyRenewalEncoderBP.js"
+        "EODB/RptPayments.js"
     ]
 }
