@@ -17,21 +17,27 @@ describe('User Payment in Cashier', () => {
      */
     it('Applicant should be able to Pay in Cashier (Municipal Hall)', function() {
         cy.scrollTo('top')
-        cy.get('#my-application').click({ force: true })
+        cy.get('#my-application').click({
+            force: true
+        })
         cy.get('.v-step__button-skip').click()
-        cy.pause()
             // cy.get('input[placeholder="Input Search Reference Number"]').type(Cypress.env("reference"))
             // cy.get('input[placeholder="Input Search Reference Number"]').focus().type('1584087656742344')
         cy.get('input[placeholder="Input Search Reference Number"]').focus().type(Cypress.env("reference"))
-        cy.get('.ant-card-actions > :nth-child(3) > span > .anticon').click({ force: true })
-        cy.get(':nth-child(1) > .ant-form-item-control-wrapper > .ant-form-item-control').type('4111111111111111', { delay: 100 })
-        cy.get(':nth-child(2) > .ant-form-item-control-wrapper > .ant-form-item-control').type('Vince Belo', { delay: 100 })
-        cy.get(':nth-child(3) > .ant-form-item-control-wrapper > .ant-form-item-control').type('12/22', { delay: 100 })
-        cy.get(':nth-child(4) > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type('232', { delay: 100 })
-        cy.get('form > :nth-child(1) > :nth-child(1)').click().wait(5000)
-        cy.get('.ant-card-body > .ant-btn').click().wait(5000)
-        cy.get(':nth-child(5) > span > #v-step-5').click({ force: true })
-        cy.get('.ant-modal-confirm-btns > .ant-btn-primary').click().wait(5000)
+        cy.pause()
+        cy.get(':nth-child(3) > .ant-badge > .ant-card > .ant-card-actions > :nth-child(3) > span > .anticon > svg').click({
+            force: true
+        })
+        cy.get('[aria-disabled="false"][aria-selected="false"] > .anticon > svg').click({
+            force: true
+        }).wait(1000)
+        cy.get('.ant-card-body > .ant-btn').click({
+            force: true
+        })
+        cy.get(':nth-child(5) > span > #v-step-5').wait(1000).click({
+            force: true
+        })
+        cy.get('.ant-modal-confirm-btns > .ant-btn-primary').click().wait(2000)
     })
 
 

@@ -3,6 +3,6 @@
     "baseUrl": "https://eodb-dev.ml/app",
     "testFiles": [
         "EODB/OpenAdminSmartJuan24.js",
-        "EODB/ComplianceTreasurer.js"
+        "EODB/TreasurerCashier.js"
     ]
 }
