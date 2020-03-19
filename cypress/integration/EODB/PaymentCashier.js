@@ -21,9 +21,7 @@ describe('User Payment in Cashier', () => {
             force: true
         })
         cy.get('.v-step__button-skip').click()
-            // cy.get('input[placeholder="Input Search Reference Number"]').type(Cypress.env("reference"))
-        cy.get('input[placeholder="Input Search Reference Number"]').focus().type('1584451899359377')
-            // cy.get('input[placeholder="Input Search Reference Number"]').focus().type(Cypress.env("reference"))
+        cy.get('input[placeholder="Input Search Reference Number"]').focus().type(Cypress.env("reference"))
         cy.pause()
         cy.get(':nth-child(3) > .ant-badge > .ant-card > .ant-card-actions > :nth-child(3) > span > .anticon > svg').click({
             force: true

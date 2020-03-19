@@ -21,7 +21,7 @@ describe('User Profile Testing', () => {
      * @description Update Profile Names
      * 
      */
-    it('Users must be able to Update their Profile', function () {
+    it('Users must be able to Update their Profile', function() {
 
         cy.get(':nth-child(1) > span > .ant-btn').click({ force: true })
         cy.wait(2000)
@@ -40,7 +40,7 @@ describe('User Profile Testing', () => {
      * @description upload avatar and save changes
      * 
      */
-    it('Users must be able to Change their Avatar', function () {
+    it('Users must be able to Change their Avatar', function() {
         //upload avatar
         const fileName = this.user_account.avatar;
         cy.fixture(fileName).then(fileContent => {

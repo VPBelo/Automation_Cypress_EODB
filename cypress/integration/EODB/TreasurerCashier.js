@@ -21,18 +21,18 @@ describe('Office of the Municipal Treasurer', () => {
         })
         cy.scrollTo('top')
         cy.pause()
-            // cy.get(':nth-child(1) > .ant-card > .ant-card-body > .ant-input-affix-wrapper > .ant-input').focus().type('1584451899359377')
+        cy.get(':nth-child(1) > .ant-card > .ant-card-body > .ant-input-affix-wrapper > .ant-input').focus().type('1584451899359377')
         cy.get('button[class="ant-btn ant-btn-link ant-btn-lg ant-btn-icon-only"]').click({
-                force: true
-            })
-            // cy.get('.ant-card-body > .ant-btn').click()
-            // cy.get('input[placeholder="Official Receipt Number"]').type('322546545A0')
-            // cy.get('input[placeholder="CC•••• ••••••••"]').type('CCC234354300')
-            // cy.get('button[class="ant-btn ant-btn-primary"]').click({
-            //     force: true
-            // })
-            // cy.get('.ant-menu > :nth-child(6)').click()
-            // cy.get('type="button"').click().wait(5000)
+            force: true
+        })
+        cy.get('.ant-card-body > .ant-btn').click()
+        cy.get('input[placeholder="Official Receipt Number"]').type('322546545A0')
+        cy.get('input[placeholder="CC•••• ••••••••"]').type('CCC234354300')
+        cy.get('button[class="ant-btn ant-btn-primary"]').click({
+            force: true
+        })
+        cy.get('.ant-menu > :nth-child(6)').click()
+        cy.get('type="button"').click().wait(5000)
     })
 
 

@@ -20,8 +20,6 @@ describe('User Payment Over the Counter', () => {
         cy.get('#my-application').click({ force: true })
         cy.get('.v-step__button-skip').click()
         cy.pause()
-            // cy.get('input[placeholder="Input Search Reference Number"]').type(Cypress.env("reference"))
-            // cy.get('input[placeholder="Input Search Reference Number"]').focus().type('1584087656742344')
         cy.get('input[placeholder="Input Search Reference Number"]').focus().type(Cypress.env("reference"))
         cy.get('.ant-card-actions > :nth-child(3) > span > .anticon').click({ force: true })
         cy.get(':nth-child(1) > .ant-form-item-control-wrapper > .ant-form-item-control').type('4111111111111111', { delay: 100 })
