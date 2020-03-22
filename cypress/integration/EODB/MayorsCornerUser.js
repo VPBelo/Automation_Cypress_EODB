@@ -25,6 +25,9 @@ describe('SmartJuan24 User Portal', () => {
             duration: 10000
         })
         cy.scrollTo(0, 300)
+        cy.get(':nth-child(1) > .ant-card > .ant-card-body > .ant-comment > .ant-comment-inner > .ant-comment-content > .ant-comment-actions > :nth-child(1) > :nth-child(1) > .anticon > svg').click({
+            force: true
+        })
         cy.get(':nth-child(5) > span > #v-step-5').click({
             force: true
         })
