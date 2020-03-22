@@ -18,9 +18,10 @@ describe('User Payment', () => {
     it('Applicant should be able to Pay in Credit Card Transactions', function() {
         cy.scrollTo('top')
         cy.get('#my-application').click({ force: true })
-        cy.get('.v-step__button-skip').click()
+        // cy.get('.v-step__button-skip').click()
         cy.pause()
         cy.get('input[placeholder="Input Search Reference Number"]').focus().type(Cypress.env("reference"))
+        // cy.get('input[placeholder="Input Search Reference Number"]').focus().type('158480582472379')
         cy.get('.ant-card-actions > :nth-child(3) > span > .anticon').click({ force: true })
         cy.get(':nth-child(1) > .ant-form-item-control-wrapper > .ant-form-item-control').type('4111111111111111', { delay: 100 })
         cy.get(':nth-child(2) > .ant-form-item-control-wrapper > .ant-form-item-control').type('Vince Belo', { delay: 100 })
