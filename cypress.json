@@ -3,30 +3,7 @@
     "baseUrl": "https://dolores.smartjuan24.ml/app",
     "testFiles": [
         "EODB/OpenSmartJuan24.js",
-        "EODB/Registration.js",
         "EODB/Login.js",
-        "EODB/ApplyNewBusinessPermit.js",
-        "EODB/OpenAdminSmartJuan24.js",
-        "EODB/TreasurerApprover.js",
-        "EODB/EngineeringApprover.js",
-        "EODB/BarangayApprover.js",
-        "EODB/InvestigatorApprover.js",
-        "EODB/PoliceApprover.js",
-        "EODB/MpdcApprover.js",
-        "EODB/MhoApprover.js",
-        "EODB/MenroApprover.js",
-        "EODB/BploComputeFeesApprover.js",
-        "EODB/OpenSmartJuan24.js",
-        "EODB/Login.js",
-        "EODB/Payment.js",
-        "EODB/OpenAdminSmartJuan24.js",
-        "EODB/TreasurerComputationFeesApprover.js",
-        "EODB/BfpApprover.js",
-        "EODB/BploFinalAssessmentApprover.js",
-        "EODB/MayorApprover.js",
-        "EODB/OpenSmartJuan24.js",
-        "EODB/Login.js",
-        "EODB/ApplicationTracker.js",
-        "EODB/Certificates.js"
+        "EODB/AssessorRequest.js"
     ]
 }

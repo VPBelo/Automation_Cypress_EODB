@@ -11,7 +11,7 @@ describe('SmartJuan24 User Portal', () => {
     })
 
 
-    it('Applicant must be able to Apply for New Business Permit', function () {
+    it('Applicant must be able to Apply for New Business Permit', function() {
         cy.scrollTo('top')
         cy.get('.ant-menu-item-selected').click({
             delay: 100
@@ -23,11 +23,11 @@ describe('SmartJuan24 User Portal', () => {
         })
         cy.scrollTo('top')
         cy.get('.ant-row-flex-space-between > .ant-row-flex > :nth-child(1)').click()
-        // cy.get(':nth-child(4) > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').click()
+            // cy.get(':nth-child(4) > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').click()
         cy.get(':nth-child(4) > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').click()
         cy.get('.ant-btn-primary').click()
         cy.scrollTo('top')
-        // cy.get(':nth-child(2) > .ant-col-sm-6 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type(this.application_details.middlename1)
+            // cy.get(':nth-child(2) > .ant-col-sm-6 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type(this.application_details.middlename1)
         cy.get('input[placeholder="Select date"]').click()
         cy.get('.ant-calendar-input').type('1995-05-13')
         cy.get('.ant-col-sm-13 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control').click()
@@ -51,7 +51,7 @@ describe('SmartJuan24 User Portal', () => {
         cy.get(':nth-child(8) > :nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').click()
         cy.get('li[style="user-select: none;"]').contains(this.application_details.basic_community).click()
         cy.get(':nth-child(3) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type(this.application_details.real_property)
-        // cy.get(':nth-child(4) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type('100000')
+            // cy.get(':nth-child(4) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type('100000')
         cy.get(':nth-child(5) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input-number > .ant-input-number-input-wrap > .ant-input-number-input').type(this.application_details.annual_salaries)
         cy.get('.ant-col-sm-16 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type(this.application_details.bldg_no)
         cy.get('[style="margin-left: -2.5px; margin-right: -2.5px;"] > .ant-col-sm-8 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type(this.application_details.unit_no)
@@ -62,10 +62,10 @@ describe('SmartJuan24 User Portal', () => {
         cy.get('li[style="user-select: none;"]').contains(this.application_details.barangay_desc).click();
         cy.get('.ant-btn-primary').click()
         cy.get('.ant-radio-group > :nth-child(4) > :nth-child(2)').click()
-        // cy.get(':nth-child(3) > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').click()
-        // cy.get('li[style="user-select: none;"]').contains('Services').click();
-        // cy.get('.ant-col-xs-16 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').click()
-        // cy.get('li[style="user-select: none;"]').contains('Service Office').click();
+            // cy.get(':nth-child(3) > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').click()
+            // cy.get('li[style="user-select: none;"]').contains('Services').click();
+            // cy.get('.ant-col-xs-16 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection').click()
+            // cy.get('li[style="user-select: none;"]').contains('Service Office').click();
         cy.get(':nth-child(3) > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type(this.application_details.business_name)
         cy.get(':nth-child(4) > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type(this.application_details.business_franchise)
         cy.get(':nth-child(5) > :nth-child(1) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input').type(this.application_details.registration_no)
@@ -91,7 +91,7 @@ describe('SmartJuan24 User Portal', () => {
 
     })
 
-    it('Applicant must be able to Upload Required Documents', function () {
+    it('Applicant must be able to Upload Required Documents', function() {
         const fileName = 'sec_certificate.json';
         cy.fixture(fileName).then(fileContent => {
             cy.get('[data-row-key="0"] > :nth-child(3) > .ant-row > .ant-col-24').within(() => {
