@@ -1,9 +1,7 @@
 {
     "projectId": "cotvd4",
-    "baseUrl": "https://dolores.smartjuan24.ml/app",
+    "baseUrl": "https://eodb-qa.ml/app",
     "testFiles": [
-        "EODB/NavigateSmartJuan24.js",
-        "EODB/Login.js",
-        "EODB/AssessorRequestCertificate.js"
+        "EODB/EodbSmartJuan24User.js"
     ]
 }
