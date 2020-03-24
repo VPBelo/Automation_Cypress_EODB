@@ -1,4 +1,4 @@
-describe('EASE OF DOING BUSINESS', () => {
+describe('SMARTJUAN24-EASE OF DOING BUSINESS', () => {
 
     /**
      * @description initialize fixtures

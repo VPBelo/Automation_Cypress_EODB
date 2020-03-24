@@ -2,6 +2,10 @@
     "projectId": "cotvd4",
     "baseUrl": "https://eodb-qa.ml/app",
     "testFiles": [
-        "EODB/EodbSmartJuan24User.js"
+        "EODB/EodbSmartJuan24User.js",
+        "EODB/EodbSmartJuan24Admin.js",
+        "EODB/EodbSmartJuanPayment.js",
+        "EODB/EodbSmartJuanFinalAssessment.js",
+        "EODB/EodbSmartJuanCertificates.js"
     ]
 }
